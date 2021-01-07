@@ -2,13 +2,22 @@
 
 <?php
 
+    $IP = explode(".",$_SERVER['REMOTE_ADDR']);
+        if ($IP[0]==143 && $IP[1]==137){
+
+            include ('topo.php');
+            include ('header.php');
+            include ('main.php');            
+        }
 
 
-print_r (explode(".",$_SERVER['REMOTE_ADDR']));
+        if ($IP[0]!=143 && $IP[1]!=137){
+
+            echo ("<img src='logo.png'>");
+            
+        }
 
 
-//if ($_SERVER['REMOTE_ADDR'] != '143.137.');
-echo ("<img src='logo.png'>");
 
 ?>
 
